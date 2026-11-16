@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="LIFEHUB: ferramentas pessoais para organizar seu dia em um só lugar.">
+  <title>LIFEHUB — Seu espaço pessoal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="LIFEHUB início">
+        <span class="brand-mark">L</span>
+        <span>LIFE<span class="brand-light">HUB</span></span>
+      </a>
+      <div class="side-label">ESPAÇO PESSOAL</div>
+      <nav class="navigation" aria-label="Navegação principal">
+        <a class="nav-link active" href="#inicio" data-view="inicio"><span class="nav-icon">⌂</span>Visão geral</a>
+        <a class="nav-link" href="#calculadora" data-view="calculadora"><span class="nav-icon">＋</span>Calculadora</a>
+        <a class="nav-link" href="#tarefas" data-view="tarefas"><span class="nav-icon">✓</span>Tarefas</a>
+        <a class="nav-link" href="#financas" data-view="financas"><span class="nav-icon">↗</span>Finanças</a>
+        <a class="nav-link" href="#tempo" data-view="tempo"><span class="nav-icon">◷</span>Foco & tempo</a>
+        <a class="nav-link" href="#notas" data-view="notas"><span class="nav-icon">▤</span>Bloco de notas</a>
+        <a class="nav-link" href="#conversor" data-view="conversor"><span class="nav-icon">⇄</span>Conversor</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="live-dot"></span><span>Tudo em um só lugar<br><small>Seu espaço, seu ritmo.</small></span></div>
+        <div class="sidebar-footer">LIFEHUB <span>·</span> SEU DIA, ORGANIZADO</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>Seu espaço</span><span class="breadcrumb-sep">/</span><strong id="current-page">Visão geral</strong></div>
+        <div class="topbar-right"><span class="today-label" id="today-label"></span><span class="avatar">L</span></div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="view active" id="view-inicio">
+          <div class="welcome-row">
+            <div><div class="eyebrow"><span class="live-dot"></span>SEU PAINEL PESSOAL</div><h1>Um dia de cada vez<span class="accent">.</span></h1><p class="subtitle">Tudo o que você precisa para cuidar do seu tempo, das suas ideias e da sua vida.</p></div>
+            <div class="clock-card"><span class="clock-label">HORÁRIO LOCAL</span><strong id="dashboard-clock">--:--:--</strong><span id="dashboard-date"></span></div>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><span class="stat-icon blue">✓</span><div><span class="stat-label">TAREFAS PENDENTES</span><strong id="stat-tasks">0</strong><small>um passo de cada vez</small></div><span class="stat-arrow">↗</span></article>
+            <article class="stat-card"><span class="stat-icon green">↗</span><div><span class="stat-label">SALDO DO MÊS</span><strong id="stat-balance">R$ 0,00</strong><small>entradas menos despesas</small></div><span class="stat-arrow">↗</span></article>
+            <article class="stat-card"><span class="stat-icon purple">◷</span><div><span class="stat-label">TEMPO DE FOCO</span><strong id="stat-focus">25:00</strong><small>seu próximo momento</small></div><span class="stat-arrow">↗</span></article>
+          </div>
+          <div class="section-heading"><div><div class="eyebrow">COMECE POR AQUI</div><h2>Suas ferramentas</h2></div><span class="muted small">Feitas para simplificar o seu dia</span></div>
+          <div class="tools-grid">
+            <button class="tool-card" data-go="calculadora"><span class="tool-icon blue">＋</span><span class="tool-title">Calculadora inteligente</span><span class="tool-description">Contas rápidas, sem complicação.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+            <button class="tool-card" data-go="tarefas"><span class="tool-icon orange">✓</span><span class="tool-title">Lista de tarefas</span><span class="tool-description">Organize o que precisa ser feito.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+            <button class="tool-card" data-go="financas"><span class="tool-icon green">↗</span><span class="tool-title">Controle financeiro</span><span class="tool-description">Acompanhe entradas e despesas.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+            <button class="tool-card" data-go="tempo"><span class="tool-icon purple">◷</span><span class="tool-title">Cronômetro e temporizador</span><span class="tool-description">Seu tempo merece atenção.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+            <button class="tool-card" data-go="notas"><span class="tool-icon yellow">▤</span><span class="tool-title">Bloco de notas</span><span class="tool-description">Guarde ideias antes que escapem.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+            <button class="tool-card" data-go="conversor"><span class="tool-icon cyan">⇄</span><span class="tool-title">Conversor de unidades</span><span class="tool-description">Medidas, peso e temperatura.</span><span class="tool-link">Abrir ferramenta <b>↗</b></span></button>
+          </div>
+          <div class="bottom-grid">
+            <article class="panel task-preview"><div class="panel-heading"><div><div class="eyebrow">FOCO DO DIA</div><h3>Próximas tarefas</h3></div><button class="text-button" data-go="tarefas">Ver todas <span>→</span></button></div><div id="task-preview-list" class="preview-list"></div></article>
+            <article class="panel quote-panel"><span class="quote-mark">“</span><p>Pequenos passos todos os dias levam a grandes mudanças.</p><span class="quote-caption">UM LEMBRETE PARA VOCÊ</span></article>
+          </div>
+        </section>
+
+        <section class="view" id="view-calculadora">
+          <div class="page-heading"><div class="eyebrow">FERRAMENTA</div><h1>Calculadora<span class="accent">.</span></h1><p class="subtitle">Faça suas contas com simplicidade.</p></div>
+          <div class="panel calculator-panel">
+            <div class="calc-display"><div id="calc-expression" class="calc-expression">0</div><div id="calc-result" class="calc-result">0</div></div>
+            <div class="calc-grid">
+              <button class="calc-key utility" data-calc="clear">AC</button><button class="calc-key utility" data-calc="back">⌫</button><button class="calc-key utility" data-calc="operator" data-value="%">%</button><button class="calc-key operator" data-calc="operator" data-value="/">÷</button>
+              <button class="calc-key" data-calc="digit" data-value="7">7</button><button class="calc-key" data-calc="digit" data-value="8">8</button><button class="calc-key" data-calc="digit" data-value="9">9</button><button class="calc-key operator" data-calc="operator" data-value="*">×</button>
+              <button class="calc-key" data-calc="digit" data-value="4">4</button><button class="calc-key" data-calc="digit" data-value="5">5</button><button class="calc-key" data-calc="digit" data-value="6">6</button><button class="calc-key operator" data-calc="operator" data-value="-">−</button>
+              <button class="calc-key" data-calc="digit" data-value="1">1</button><button class="calc-key" data-calc="digit" data-value="2">2</button><button class="calc-key" data-calc="digit" data-value="3">3</button><button class="calc-key operator" data-calc="operator" data-value="+">+</button>
+              <button class="calc-key utility" data-calc="sign">±</button><button class="calc-key" data-calc="digit" data-value="0">0</button><button class="calc-key" data-calc="decimal">,</button><button class="calc-key equals" data-calc="equals">=</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-tarefas">
+          <div class="page-heading"><div class="eyebrow">ORGANIZE SEU DIA</div><h1>Lista de tarefas<span class="accent">.</span></h1><p class="subtitle">Tudo começa com o próximo passo.</p></div>
+          <div class="panel">
+            <form id="task-form" class="inline-form"><label class="sr-only" for="task-input">Nova tarefa</label><input id="task-input" type="text" maxlength="160" placeholder="O que você precisa fazer?" required><button class="primary-button" type="submit">＋ Adicionar tarefa</button></form>
+            <div class="list-toolbar"><span id="task-count" class="muted">0 tarefas</span><button class="text-button" id="clear-completed">Limpar concluídas</button></div>
+            <ul id="task-list" class="task-list"></ul><div id="task-empty" class="empty-state">Nenhuma tarefa por aqui. Que tal adicionar a primeira?</div>
+          </div>
+        </section>
+
+        <section class="view" id="view-financas">
+          <div class="page-heading"><div class="eyebrow">CUIDE DO SEU DINHEIRO</div><h1>Controle financeiro<span class="accent">.</span></h1><p class="subtitle">Uma visão simples das suas entradas e despesas.</p></div>
+          <div class="finance-summary"><article class="panel finance-total"><span class="stat-label">SALDO ATUAL</span><strong id="finance-balance">R$ 0,00</strong><small>Entradas menos despesas</small></article><article class="panel finance-total"><span class="stat-label">ENTRADAS</span><strong id="finance-income" class="positive">R$ 0,00</strong><small>Total registrado</small></article><article class="panel finance-total"><span class="stat-label">DESPESAS</span><strong id="finance-expenses" class="negative">R$ 0,00</strong><small>Total registrado</small></article></div>
+          <div class="panel finance-panel"><div class="panel-heading"><div><div class="eyebrow">LANÇAMENTOS</div><h3>Movimentações</h3></div></div>
+            <form id="finance-form" class="finance-form"><div class="field"><label for="finance-description">Descrição</label><input id="finance-description" type="text" maxlength="100" placeholder="Ex.: mercado" required></div><div class="field"><label for="finance-amount">Valor (R$)</label><input id="finance-amount" type="number" min="0.01" step="0.01" placeholder="0,00" required></div><div class="field"><label for="finance-type">Tipo</label><select id="finance-type"><option value="expense">Despesa</option><option value="income">Entrada</option></select></div><button class="primary-button" type="submit">＋ Registrar</button></form>
+            <div id="finance-list" class="finance-list"></div><div id="finance-empty" class="empty-state">Suas movimentações aparecerão aqui.</div>
+          </div>
+        </section>
+
+        <section class="view" id="view-tempo">
+          <div class="page-heading"><div class="eyebrow">PRESENÇA NO AGORA</div><h1>Foco & tempo<span class="accent">.</span></h1><p class="subtitle">Escolha um ritmo e cuide do seu tempo.</p></div>
+          <div class="timer-grid">
+            <article class="panel timer-panel"><div class="eyebrow">TEMPORIZADOR DE FOCO</div><h3>Um intervalo de cada vez.</h3><div class="timer-display" id="timer-display">25:00</div><div class="timer-presets"><button class="preset active" data-minutes="25">25 min</button><button class="preset" data-minutes="15">15 min</button><button class="preset" data-minutes="5">5 min</button></div><div class="timer-actions"><button class="primary-button" id="timer-toggle">Iniciar foco</button><button class="secondary-button" id="timer-reset">Reiniciar</button></div></article>
+            <article class="panel timer-panel stopwatch-panel"><div class="eyebrow">CRONÔMETRO</div><h3>Marque o seu tempo.</h3><div class="timer-display" id="stopwatch-display">00:00.0</div><div class="timer-actions"><button class="primary-button" id="stopwatch-toggle">Iniciar</button><button class="secondary-button" id="stopwatch-lap" disabled>Volta</button><button class="secondary-button" id="stopwatch-reset">Zerar</button></div><div id="stopwatch-laps" class="lap-list"></div></article>
+          </div>
+        </section>
+
+        <section class="view" id="view-notas">
+          <div class="page-heading"><div class="eyebrow">UM LUGAR PARA AS IDEIAS</div><h1>Bloco de notas<span class="accent">.</span></h1><p class="subtitle">Suas anotações ficam salvas neste navegador.</p></div>
+          <div class="panel notes-panel"><div class="notes-toolbar"><span class="notes-status"><span class="live-dot"></span><span id="notes-status">Salvo localmente</span></span><button class="text-button" id="clear-notes">Limpar notas</button></div><label class="sr-only" for="notes-area">Suas anotações</label><textarea id="notes-area" placeholder="Escreva uma ideia, um plano ou qualquer coisa que queira lembrar..."></textarea><div class="notes-footer">PRIVADO NESTE DISPOSITIVO <span id="notes-count">0 caracteres</span></div></div>
+        </section>
+
+        <section class="view" id="view-conversor">
+          <div class="page-heading"><div class="eyebrow">TRANSFORME MEDIDAS</div><h1>Conversor de unidades<span class="accent">.</span></h1><p class="subtitle">Conversões rápidas para o dia a dia.</p></div>
+          <div class="panel converter-panel"><div class="field"><label for="conversion-category">Categoria</label><select id="conversion-category"><option value="length">Comprimento</option><option value="weight">Peso</option><option value="temperature">Temperatura</option></select></div><div class="conversion-row"><div class="field"><label for="conversion-value">Valor</label><input id="conversion-value" type="number" step="any" value="1"></div><div class="field"><label for="conversion-from">De</label><select id="conversion-from"></select></div><span class="conversion-arrow">→</span><div class="field"><label for="conversion-to">Para</label><select id="conversion-to"></select></div></div><div class="conversion-result"><span>RESULTADO</span><strong id="conversion-result">1.000</strong></div></div>
+        </section>
+
+        <footer class="page-footer"><span>Feito para deixar seu dia mais leve.</span><span>LIFEHUB <span class="footer-dot">●</span></span></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
